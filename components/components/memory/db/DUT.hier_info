@@ -1,0 +1,75 @@
+|DUT
+input_vector[0] => memory:add_instance.addr[0]
+input_vector[1] => memory:add_instance.addr[1]
+input_vector[2] => memory:add_instance.addr[2]
+input_vector[3] => memory:add_instance.addr[3]
+input_vector[4] => memory:add_instance.addr[4]
+input_vector[5] => memory:add_instance.addr[5]
+input_vector[6] => memory:add_instance.addr[6]
+input_vector[7] => memory:add_instance.addr[7]
+input_vector[8] => memory:add_instance.addr[8]
+input_vector[9] => memory:add_instance.addr[9]
+input_vector[10] => memory:add_instance.clk
+output_vector[0] <= memory:add_instance.data_out[0]
+output_vector[1] <= memory:add_instance.data_out[1]
+output_vector[2] <= memory:add_instance.data_out[2]
+output_vector[3] <= memory:add_instance.data_out[3]
+output_vector[4] <= memory:add_instance.data_out[4]
+output_vector[5] <= memory:add_instance.data_out[5]
+output_vector[6] <= memory:add_instance.data_out[6]
+output_vector[7] <= memory:add_instance.data_out[7]
+output_vector[8] <= memory:add_instance.data_out[8]
+output_vector[9] <= memory:add_instance.data_out[9]
+output_vector[10] <= memory:add_instance.data_out[10]
+output_vector[11] <= memory:add_instance.data_out[11]
+output_vector[12] <= memory:add_instance.data_out[12]
+output_vector[13] <= memory:add_instance.data_out[13]
+output_vector[14] <= memory:add_instance.data_out[14]
+output_vector[15] <= memory:add_instance.data_out[15]
+
+
+|DUT|memory:add_instance
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+clk => data_out[8]~reg0.CLK
+clk => data_out[9]~reg0.CLK
+clk => data_out[10]~reg0.CLK
+clk => data_out[11]~reg0.CLK
+clk => data_out[12]~reg0.CLK
+clk => data_out[13]~reg0.CLK
+clk => data_out[14]~reg0.CLK
+clk => data_out[15]~reg0.CLK
+addr[0] => memory_data.RADDR
+addr[1] => memory_data.RADDR1
+addr[2] => memory_data.RADDR2
+addr[3] => memory_data.RADDR3
+addr[4] => memory_data.RADDR4
+addr[5] => memory_data.RADDR5
+addr[6] => memory_data.RADDR6
+addr[7] => memory_data.RADDR7
+addr[8] => memory_data.RADDR8
+addr[9] => memory_data.RADDR9
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[10] <= data_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[11] <= data_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[12] <= data_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[13] <= data_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[14] <= data_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[15] <= data_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

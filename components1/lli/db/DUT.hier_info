@@ -1,0 +1,56 @@
+|DUT
+input_vector[0] => LLI:add_instance.x[0]
+input_vector[1] => LLI:add_instance.x[1]
+input_vector[2] => LLI:add_instance.x[2]
+input_vector[3] => LLI:add_instance.x[3]
+input_vector[4] => LLI:add_instance.x[4]
+input_vector[5] => LLI:add_instance.x[5]
+input_vector[6] => LLI:add_instance.x[6]
+input_vector[7] => LLI:add_instance.x[7]
+input_vector[8] => LLI:add_instance.x[8]
+output_vector[0] <= LLI:add_instance.y[0]
+output_vector[1] <= LLI:add_instance.y[1]
+output_vector[2] <= LLI:add_instance.y[2]
+output_vector[3] <= LLI:add_instance.y[3]
+output_vector[4] <= LLI:add_instance.y[4]
+output_vector[5] <= LLI:add_instance.y[5]
+output_vector[6] <= LLI:add_instance.y[6]
+output_vector[7] <= LLI:add_instance.y[7]
+output_vector[8] <= LLI:add_instance.y[8]
+output_vector[9] <= LLI:add_instance.y[9]
+output_vector[10] <= LLI:add_instance.y[10]
+output_vector[11] <= LLI:add_instance.y[11]
+output_vector[12] <= LLI:add_instance.y[12]
+output_vector[13] <= LLI:add_instance.y[13]
+output_vector[14] <= LLI:add_instance.y[14]
+output_vector[15] <= LLI:add_instance.y[15]
+
+
+|DUT|LLI:add_instance
+x[0] => y[0].DATAIN
+x[1] => y[1].DATAIN
+x[2] => y[2].DATAIN
+x[3] => y[3].DATAIN
+x[4] => y[4].DATAIN
+x[5] => y[5].DATAIN
+x[6] => y[6].DATAIN
+x[7] => y[7].DATAIN
+x[8] => y[8].DATAIN
+y[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= x[5].DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= x[6].DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= x[7].DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= x[8].DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= <GND>
+y[10] <= <GND>
+y[11] <= <GND>
+y[12] <= <GND>
+y[13] <= <GND>
+y[14] <= <GND>
+y[15] <= <GND>
+
+

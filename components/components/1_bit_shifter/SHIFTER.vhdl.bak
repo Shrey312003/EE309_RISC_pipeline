@@ -1,0 +1,62 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity SHIFTER  is
+  port (A: in std_logic_vector(7 downto 0);
+        B: in std_logic_vector(2 downto 0);
+		  L: std_logic;
+		  output: out std_logic_vector(7 downto 0));
+end entity SHIFTER;
+
+architecture Struct of SHIFTER is
+  component mux is
+  port (I : in std_logic_vector(1 downto 0);
+  S: in std_logic; Y: out std_logic);
+end  component mux;
+  
+  signal s1,s2,s3,s4: std_logic_vector(7 downto 0);
+         
+  begin
+  -- component instances
+  	 reversal1 : for i in 0 to 7 generate
+    lmn : mux port map(I(0) => A(i), I(1) => A(7-i), S => L , Y => s1(i)); 
+     end generate ;
+	
+	
+  n4_bit : for i in 0 to 7 generate
+   lsb: if i < 4 generate
+   B2: mux port map(I(0) => s1(i), I(1) => s1(i+4), S => B(2), Y => s2(i));
+   end generate lsb;
+   msb: if i > 3 generate
+   B2: mux port map(I(0) => s1(i), I(1) => '0', S => B(2), Y => s2(i));
+   end generate msb;
+   end generate ;
+	
+  n2_bit : for i in 0 to 7 generate
+   lsb: if i < 6 generate
+   B1: mux port map(I(0) => s2(i), I(1) => s2(i+2), S => B(1), Y => s3(i));
+   end generate lsb;
+   msb: if i > 5 generate
+   B1: mux port map(I(0) => s2(i), I(1) => '0', S => B(1), Y => s3(i));
+   end generate msb;
+   end generate ;
+	
+  n1_bit : for i in 0 to 7 generate
+   lsb: if i < 7 generate
+   B0: mux port map(I(0) => s3(i), I(1) => s3(i+1), S => B(0), Y => s4(i));
+   end generate lsb;
+   msb: if i > 6 generate
+   B0: mux port map(I(0) => s3(i), I(1) => '0', S => B(0), Y => s4(i));
+   end generate msb;
+   end generate ;
+	
+  reversal2 : for i in 0 to 7 generate
+   lm : mux port map(I(0) => s4(i), I(1) => s4(7-i), s => L, Y => output(i)); 
+   end generate  reversal2 ;
+  
+  
+  -- final OR
+  
+end Struct;

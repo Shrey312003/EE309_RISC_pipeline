@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/SEM_4/ee309/project/components/components/decoder/simulation/modelsim
+Edecoder
+Z1 w1683289526
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8D:/SEM_4/ee309/project/components/components/decoder/decoder.vhd
+Z6 FD:/SEM_4/ee309/project/components/components/decoder/decoder.vhd
+l0
+L5 1
+VR]=MUF55I;YiHUJI2AFQB3
+!s100 9eadd;O7EKZSjG?jWFN[B3
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1683289659
+!i10b 1
+Z9 !s108 1683289659.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/SEM_4/ee309/project/components/components/decoder/decoder.vhd|
+!s107 D:/SEM_4/ee309/project/components/components/decoder/decoder.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehave
+R2
+R3
+R4
+DEx4 work 7 decoder 0 22 R]=MUF55I;YiHUJI2AFQB3
+!i122 1
+l18
+L15 168
+V;C1[^PaXK]RB;kYc4@?gm0
+!s100 ga5oTinUE^1`_dT<^<VXT2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 D:/SEM_4/ee309/project/components/components/decoder/decoder.vhd|
+!i113 1
+R11
+R12
+Edut
+Z14 w1683286879
+R3
+R4
+!i122 0
+R0
+Z15 8D:/SEM_4/ee309/project/components/components/decoder/DUT.vhdl
+Z16 FD:/SEM_4/ee309/project/components/components/decoder/DUT.vhdl
+l0
+L7 1
+Vii1JPb[DD84AWRObMM[5_0
+!s100 ng@b:EFOB3D>EUi3k`DRV2
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/SEM_4/ee309/project/components/components/decoder/DUT.vhdl|
+Z18 !s107 D:/SEM_4/ee309/project/components/components/decoder/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 ii1JPb[DD84AWRObMM[5_0
+!i122 0
+l21
+L12 24
+V8l?B><fC]lX_0m^ah8F`Z2
+!s100 z3gbQ8G4c[IXgEhO;hLnz1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R11
+R12

@@ -1,0 +1,63 @@
+|DUT
+input_vector[0] => mux_2to1_8:add_instance.x1[0]
+input_vector[1] => mux_2to1_8:add_instance.x1[1]
+input_vector[2] => mux_2to1_8:add_instance.x1[2]
+input_vector[3] => mux_2to1_8:add_instance.x1[3]
+input_vector[4] => mux_2to1_8:add_instance.x1[4]
+input_vector[5] => mux_2to1_8:add_instance.x1[5]
+input_vector[6] => mux_2to1_8:add_instance.x1[6]
+input_vector[7] => mux_2to1_8:add_instance.x1[7]
+input_vector[8] => mux_2to1_8:add_instance.x0[0]
+input_vector[9] => mux_2to1_8:add_instance.x0[1]
+input_vector[10] => mux_2to1_8:add_instance.x0[2]
+input_vector[11] => mux_2to1_8:add_instance.x0[3]
+input_vector[12] => mux_2to1_8:add_instance.x0[4]
+input_vector[13] => mux_2to1_8:add_instance.x0[5]
+input_vector[14] => mux_2to1_8:add_instance.x0[6]
+input_vector[15] => mux_2to1_8:add_instance.x0[7]
+input_vector[16] => mux_2to1_8:add_instance.sel[0]
+output_vector[0] <= mux_2to1_8:add_instance.y[0]
+output_vector[1] <= mux_2to1_8:add_instance.y[1]
+output_vector[2] <= mux_2to1_8:add_instance.y[2]
+output_vector[3] <= mux_2to1_8:add_instance.y[3]
+output_vector[4] <= mux_2to1_8:add_instance.y[4]
+output_vector[5] <= mux_2to1_8:add_instance.y[5]
+output_vector[6] <= mux_2to1_8:add_instance.y[6]
+output_vector[7] <= mux_2to1_8:add_instance.y[7]
+
+
+|DUT|mux_2to1_8:add_instance
+x0[0] => y.DATAB
+x0[1] => y.DATAB
+x0[2] => y.DATAB
+x0[3] => y.DATAB
+x0[4] => y.DATAB
+x0[5] => y.DATAB
+x0[6] => y.DATAB
+x0[7] => y.DATAB
+x1[0] => y.DATAA
+x1[1] => y.DATAA
+x1[2] => y.DATAA
+x1[3] => y.DATAA
+x1[4] => y.DATAA
+x1[5] => y.DATAA
+x1[6] => y.DATAA
+x1[7] => y.DATAA
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+sel[0] => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

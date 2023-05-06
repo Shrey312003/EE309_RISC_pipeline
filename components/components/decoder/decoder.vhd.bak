@@ -1,0 +1,192 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Decoder is
+    port
+    (  instruct_info : in std_logic_vector(15 downto 0);
+         clk : in std_logic,
+       CB : out std_logic_vector(33 downto 0);
+    );
+end Decoder;
+
+architecture behave of Decoder is
+    begin 
+# -- P1_WR	INC_EN	P2_WR	M9	M12		M15	M1	M2	M13	M14	P3_WR		M3	M4	CPL-En	M5	P4_WR		M16	M7	M8	MEM_EN	P5_WR		M10	M11	RF_WR
+            signal count integer <= 0;
+ --Initial  if (instruct_info = "0000000000000000") then
+            CB <= "1001110000000000000000000000000000";
+        else
+     if((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "000")) then -- ADA 
+                CB <= "1011110000001001010101001111011111";
+   elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "010")) then  -- ADC 
+                CB <= "1011110000001001010101001111011110";
+   elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "100")) then   -- ADZ
+                CB <= "1011110000001001010101001111011111";
+   elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "011")) then  -- AWC 
+                CB <= "1011110000001001010101001111011111";
+    elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "100")) then  -- ACA
+                CB <= "1011110000001001010101101111011111";
+    elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "110")) then  -- ACC
+                CB <= "1011110000001001010101101111011110";
+    elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "101")) then -- ACZ
+                CB <= "1011110000001001010101101111011111";
+    elsif ((instruct_info(15 downto 12) = "0001") and (instruct_info(2 downto 0) = "111")) then -- ACW
+                CB <= "1011110000001001010101101111011111";
+    elsif (instruct_info(15 downto 12) = "000") then -- ADI
+                CB <= "1011110000001001010110101111011111";
+    elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "000")) then -- NDU
+                CB <= "1011110000001001010101001111011111";
+    elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "010")) then -- NDC
+                CB <= "1011110000001001010101001111011110";
+    elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "001")) then -- NDZ
+                CB <= "1011110000001001010101001111011111";
+    elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "100")) then -- NCU
+                CB <= "1011110000001001010101101111011111";
+   elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "110")) then -- NCC 
+                CB <= "1011110000001001010101101111011110";
+    elsif ((instruct_info(15 downto 12) = "0010") and (instruct_info(2 downto 0) = "101")) then -- NCZ
+                CB <= "1011110000001001010101101111011111";
+    elsif ((instruct_info(15 downto 12) = "0011")) then -- LLI
+                CB <= "1011110010100100110101111111010101";
+    elsif ((instruct_info(15 downto 12) = "0100")) then -- LW
+                CB <= "1011110000001001011001001101010111";
+    elsif ((instruct_info(15 downto 12) = "0101")) then -- SW
+                CB <= "1011110000001001011001001110110110";
+    elsif ((instruct_info(15 downto 12) = "0110")) then -- LM
+                if (count = 0) then
+                    CB <= "0111010000001000110111111101010011";
+                elsif (count = 1) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 2) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 3) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 4) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 5) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 6) then
+                    CB <= "0111010011101000110111111101010011";
+                elsif (count = 7) then
+                    CB <= "1111010011101000110111111101010011";
+                    count = -1;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+    elsif ((instruct_info(15 downto 12) = "0111")) then -- SM
+                if (count = 0) then
+                    CB <= "0111010010001001010111111111110110";
+                elsif (count = 1) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 2) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 3) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 4) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 5) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 6) then
+                    CB <= "0111010011101001010111111111110110";
+                elsif (count = 7) then
+                    CB <= "1111010011101001010111111111110110";
+                    count = -1;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+    elsif ((instruct_info(15 downto 14) = "10") ) then -- BEQ/BLT/BLE
+                if (count = 0) then
+                    CB <= "0011010000001001010101001111010110";
+                elsif (count = 1) then
+                    CB <= "0011010011100100110101111111010110";
+                elsif (count = 2) then
+                    CB <= "0011010011100100110101111111010110";
+                elsif (count >= 3) then
+                    if(((instruct_info(13 downto 12) = "00")and(z='1'))or((instruct_info(13 downto 12) = "01")and(c='1'))or((instruct_info(13 downto 12) = "11")and(c='1' or z='1'))) then -- True
+                        if(count = 3) then
+                            CB <= "0010010011100100110101111111010110";
+                        elsif(count = 4) then
+                            CB <= "1011110011100100110101111111010110";
+                            count = -1;
+                        endif;
+                    else --False
+                        if(count = 3) then
+                           CB <= "1011110011100100110101111111010110";
+                           count = -1;
+                        endif;
+                    endif;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+    elsif ((instruct_info(15 downto 12) = "1100") ) --JAL 
+                if (count = 0) then
+                    CB <= "0010010011100100110011101111010111";
+                elsif (count = 1) then
+                    CB <= "1011110011100100110101111111010110";
+                    count=-1;
+                else
+                    count = -1;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+    elsif ((instruct_info(15 downto 12) = "1101") ) --JLR
+                if (count = 0) then
+                    CB <= "0011010000100101010011101111010111";
+                elsif (count = 1) then
+                    CB <= "0011010011100100110101111111010110";
+                elsif (count = 2) then
+                    CB <= "0010101011100100110101111111010110";
+                elsif(count = 3) then
+                    CB <= "1011110011100100110101111111010110";
+                    count=-1;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+     elsif ((instruct_info(15 downto 12) = "1111") ) --JRI , , , 
+                if (count = 0) then
+                    CB <= "0011010000100101010011101111010111";
+                elsif (count = 1) then
+                    CB <= "0011010011100100110101111111010110";
+                elsif (count = 2) then
+                    CB <= "0011010011100100110101111111010110";
+                elsif(count = 3) then
+                    CB <= "0010101111100100110101111111010110";
+                elsif (count = 4) then
+                    CB <= "1011110011100100110101111111010110";
+                    count=-1;
+                endif;
+                process (clk)
+                begin
+                      if rising_edge(clk) then
+                         -- process statements
+                            count <= count + 1;
+                      end if;
+                end process;
+    end if;
+end behave;

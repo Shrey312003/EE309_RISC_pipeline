@@ -1,0 +1,22 @@
+|DUT
+input_vector[0] => Counter:add_instance.counter_in[0]
+input_vector[1] => Counter:add_instance.counter_in[1]
+input_vector[2] => Counter:add_instance.counter_in[2]
+input_vector[3] => Counter:add_instance.clk
+output_vector[0] << Counter:add_instance.counter_out[0]
+output_vector[1] << Counter:add_instance.counter_out[1]
+output_vector[2] << Counter:add_instance.counter_out[2]
+
+
+|DUT|Counter:add_instance
+counter_in[0] => counter_out[0]~reg0.DATAIN
+counter_in[1] => counter_out[1]~reg0.DATAIN
+counter_in[2] => counter_out[2]~reg0.DATAIN
+counter_out[0] <= counter_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[1] <= counter_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[2] <= counter_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => counter_out[0]~reg0.CLK
+clk => counter_out[1]~reg0.CLK
+clk => counter_out[2]~reg0.CLK
+
+

@@ -1,0 +1,322 @@
+Analysis & Elaboration report for DUT
+Sat May 06 20:35:08 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Failed - Sat May 06 20:35:08 2023           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DUT                                         ;
+; Top-level Entity Name              ; main                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; main               ; DUT                ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat May 06 20:35:00 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c DUT --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file all_components/clock.vhd
+    Info (12022): Found design unit 1: clock-bhv File: D:/SEM_4/ee309/project/all_components/clock.vhd Line: 9
+    Info (12023): Found entity 1: clock File: D:/SEM_4/ee309/project/all_components/clock.vhd Line: 5
+Info (12021): Found 90 design units, including 44 entities, in source file all_components.vhd
+    Info (12022): Found design unit 1: all_components File: D:/SEM_4/ee309/project/all_components.vhd Line: 9
+    Info (12022): Found design unit 2: L_shift-Shift1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 390
+    Info (12022): Found design unit 3: SE7-SE7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 417
+    Info (12022): Found design unit 4: mux_3to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 445
+    Info (12022): Found design unit 5: Decoder-behave File: D:/SEM_4/ee309/project/all_components.vhd Line: 473
+    Info (12022): Found design unit 6: instr_memory-memory_comp File: D:/SEM_4/ee309/project/all_components.vhd Line: 661
+    Info (12022): Found design unit 7: mux_2to1_3-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 697
+    Info (12022): Found design unit 8: mux_2to1_8-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 724
+    Info (12022): Found design unit 9: mux_4to1_1-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 750
+    Info (12022): Found design unit 10: mux_2to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 810
+    Info (12022): Found design unit 11: mux_5to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 838
+    Info (12022): Found design unit 12: mux_6to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 863
+    Info (12022): Found design unit 13: Adder-add File: D:/SEM_4/ee309/project/all_components.vhd Line: 897
+    Info (12022): Found design unit 14: ALU-alu File: D:/SEM_4/ee309/project/all_components.vhd Line: 935
+    Info (12022): Found design unit 15: reg_carry-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1162
+    Info (12022): Found design unit 16: complementor-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1217
+    Info (12022): Found design unit 17: counter1-count_inst File: D:/SEM_4/ee309/project/all_components.vhd Line: 1245
+    Info (12022): Found design unit 18: data_memory-memory_comp File: D:/SEM_4/ee309/project/all_components.vhd Line: 1286
+    Info (12022): Found design unit 19: Decrement-struct File: D:/SEM_4/ee309/project/all_components.vhd Line: 1329
+    Info (12022): Found design unit 20: Gates File: D:/SEM_4/ee309/project/all_components.vhd Line: 1345
+    Info (12022): Found design unit 21: INVERTER-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1387
+    Info (12022): Found design unit 22: AND_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1399
+    Info (12022): Found design unit 23: NAND_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1410
+    Info (12022): Found design unit 24: OR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1421
+    Info (12022): Found design unit 25: NOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1432
+    Info (12022): Found design unit 26: XOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1444
+    Info (12022): Found design unit 27: XNOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1455
+    Info (12022): Found design unit 28: HALF_ADDER-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1466
+    Info (12022): Found design unit 29: increment-struct File: D:/SEM_4/ee309/project/all_components.vhd Line: 1488
+    Info (12022): Found design unit 30: LLI-LLI File: D:/SEM_4/ee309/project/all_components.vhd Line: 1516
+    Info (12022): Found design unit 31: mux_2x1_16-viru_god File: D:/SEM_4/ee309/project/all_components.vhd Line: 1535
+    Info (12022): Found design unit 32: mux_4to1_3-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1563
+    Info (12022): Found design unit 33: mux_4to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1589
+    Info (12022): Found design unit 34: mux_8to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1613
+    Info (12022): Found design unit 35: reg_a-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1647
+    Info (12022): Found design unit 36: reg_b-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1690
+    Info (12022): Found design unit 37: reg_c1-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1726
+    Info (12022): Found design unit 38: reg_d-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1762
+    Info (12022): Found design unit 39: reg_e-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1799
+    Info (12022): Found design unit 40: reg_file_1-behave File: D:/SEM_4/ee309/project/all_components.vhd Line: 1835
+    Info (12022): Found design unit 41: SE6-SE6 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1904
+    Info (12022): Found design unit 42: SE9-SE9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1934
+    Info (12022): Found design unit 43: SE10-Sign File: D:/SEM_4/ee309/project/all_components.vhd Line: 1961
+    Info (12022): Found design unit 44: shifter_6_7-Shift1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1993
+    Info (12022): Found design unit 45: shift_9_10-Shift9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 2018
+    Info (12022): Found design unit 46: reg_z-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 2044
+    Info (12023): Found entity 1: L_shift File: D:/SEM_4/ee309/project/all_components.vhd Line: 381
+    Info (12023): Found entity 2: SE7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 408
+    Info (12023): Found entity 3: mux_3to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 438
+    Info (12023): Found entity 4: Decoder File: D:/SEM_4/ee309/project/all_components.vhd Line: 463
+    Info (12023): Found entity 5: instr_memory File: D:/SEM_4/ee309/project/all_components.vhd Line: 647
+    Info (12023): Found entity 6: mux_2to1_3 File: D:/SEM_4/ee309/project/all_components.vhd Line: 688
+    Info (12023): Found entity 7: mux_2to1_8 File: D:/SEM_4/ee309/project/all_components.vhd Line: 717
+    Info (12023): Found entity 8: mux_4to1_1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 740
+    Info (12023): Found entity 9: mux_2to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 801
+    Info (12023): Found entity 10: mux_5to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 831
+    Info (12023): Found entity 11: mux_6to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 856
+    Info (12023): Found entity 12: Adder File: D:/SEM_4/ee309/project/all_components.vhd Line: 886
+    Info (12023): Found entity 13: ALU File: D:/SEM_4/ee309/project/all_components.vhd Line: 919
+    Info (12023): Found entity 14: reg_carry File: D:/SEM_4/ee309/project/all_components.vhd Line: 1152
+    Info (12023): Found entity 15: complementor File: D:/SEM_4/ee309/project/all_components.vhd Line: 1210
+    Info (12023): Found entity 16: Counter1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1234
+    Info (12023): Found entity 17: data_memory File: D:/SEM_4/ee309/project/all_components.vhd Line: 1263
+    Info (12023): Found entity 18: Decrement File: D:/SEM_4/ee309/project/all_components.vhd Line: 1320
+    Info (12023): Found entity 19: INVERTER File: D:/SEM_4/ee309/project/all_components.vhd Line: 1383
+    Info (12023): Found entity 20: AND_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1395
+    Info (12023): Found entity 21: NAND_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1406
+    Info (12023): Found entity 22: OR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1417
+    Info (12023): Found entity 23: NOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1428
+    Info (12023): Found entity 24: XOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1440
+    Info (12023): Found entity 25: XNOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1451
+    Info (12023): Found entity 26: HALF_ADDER File: D:/SEM_4/ee309/project/all_components.vhd Line: 1462
+    Info (12023): Found entity 27: increment File: D:/SEM_4/ee309/project/all_components.vhd Line: 1478
+    Info (12023): Found entity 28: LLI File: D:/SEM_4/ee309/project/all_components.vhd Line: 1507
+    Info (12023): Found entity 29: mux_2x1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1526
+    Info (12023): Found entity 30: mux_4to1_3 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1554
+    Info (12023): Found entity 31: mux_4to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1580
+    Info (12023): Found entity 32: mux_8to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1606
+    Info (12023): Found entity 33: reg_a File: D:/SEM_4/ee309/project/all_components.vhd Line: 1638
+    Info (12023): Found entity 34: reg_b File: D:/SEM_4/ee309/project/all_components.vhd Line: 1681
+    Info (12023): Found entity 35: reg_c1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1717
+    Info (12023): Found entity 36: reg_d File: D:/SEM_4/ee309/project/all_components.vhd Line: 1753
+    Info (12023): Found entity 37: reg_e File: D:/SEM_4/ee309/project/all_components.vhd Line: 1790
+    Info (12023): Found entity 38: reg_file_1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1824
+    Info (12023): Found entity 39: SE6 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1895
+    Info (12023): Found entity 40: SE9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1925
+    Info (12023): Found entity 41: SE10 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1953
+    Info (12023): Found entity 42: shifter_6_7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1984
+    Info (12023): Found entity 43: shift_9_10 File: D:/SEM_4/ee309/project/all_components.vhd Line: 2009
+    Info (12023): Found entity 44: reg_z File: D:/SEM_4/ee309/project/all_components.vhd Line: 2034
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: main-behave File: D:/SEM_4/ee309/project/main.vhd Line: 19
+    Info (12023): Found entity 1: main File: D:/SEM_4/ee309/project/main.vhd Line: 8
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at main.vhd(27): used implicit default value for signal "SE_in4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "C_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "Z_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(31): object "M17_out" assigned a value but never read File: D:/SEM_4/ee309/project/main.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at main.vhd(39): used implicit default value for signal "SE_in5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 39
+Info (12128): Elaborating entity "reg_a" for hierarchy "reg_a:P1" File: D:/SEM_4/ee309/project/main.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1657): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/project/all_components.vhd Line: 1657
+Info (10635): VHDL Report Statement at all_components.vhd(1657): "pipeline1 = 0" (NOTE) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1657
+Error (10818): Can't infer register for "rega_output[0]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[0]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[1]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[1]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[2]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[2]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[3]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[3]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[4]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[4]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[5]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[5]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[6]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[6]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[7]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[7]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[8]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[8]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[9]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[9]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[10]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[10]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[11]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[11]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[12]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[12]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[13]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[13]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[14]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[14]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[15]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[15]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[16]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[16]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[17]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[17]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (10818): Can't infer register for "rega_output[18]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
+Info (10041): Inferred latch for "rega_output[18]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
+Error (12152): Can't elaborate user hierarchy "reg_a:P1" File: D:/SEM_4/ee309/project/main.vhd Line: 119
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 20 errors, 7 warnings
+    Error: Peak virtual memory: 4780 megabytes
+    Error: Processing ended: Sat May 06 20:35:08 2023
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:12
+
+

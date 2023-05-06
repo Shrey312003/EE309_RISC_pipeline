@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity clockTb is
+--port (clk : out std_logic);
+end entity clockTb;
+
+architecture bhv of clockTb is
+
+signal rst : std_logic := '0';
+--constant clk_frequency : integer := 2e4; --set time period to 5ns By Tanmay
+constant clk_period : time:= 40000 ps;
+signal clk: std_logic := '1';
+signal D50_join,D51_join,D52_join,D53_join,D54_join,D55_join,D56_join,D57_join: std_logic_vector(15 downto 0);
+
+component Datapath is
+ port (clk, reset : IN STD_LOGIC; D50_join,D51_join,D52_join,D53_join,D54_join,D55_join,D56_join,D57_join:out std_logic_vector(15 downto 0));
+end component;
+
+begin
+project: Datapath port map(clk, rst,D50_join,D51_join,D52_join,D53_join,D54_join,D55_join,D56_join,D57_join);
+proc: process(clk)
+begin
+clk<= not clk after clk_period/2;
+end process;
+	
+end bhv;

@@ -1,0 +1,16 @@
+|DUT
+input_vector[0] => reg_a:add_instance.rega_input
+input_vector[1] => reg_a:add_instance.writ
+input_vector[2] => reg_a:add_instance.reset
+input_vector[3] => reg_a:add_instance.clk
+output_vector << reg_a:add_instance.rega_output
+
+
+|DUT|reg_a:add_instance
+rega_input => output.DATAIN
+writ => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+clk => output.CLK
+rega_output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

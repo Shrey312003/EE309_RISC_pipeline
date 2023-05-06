@@ -1,0 +1,32 @@
+|DUT
+input_vector[0] => shifter_6_7:add_instance.data_in[0]
+input_vector[1] => shifter_6_7:add_instance.data_in[1]
+input_vector[2] => shifter_6_7:add_instance.data_in[2]
+input_vector[3] => shifter_6_7:add_instance.data_in[3]
+input_vector[4] => shifter_6_7:add_instance.data_in[4]
+input_vector[5] => shifter_6_7:add_instance.data_in[5]
+output_vector[0] <= shifter_6_7:add_instance.data_out[0]
+output_vector[1] <= shifter_6_7:add_instance.data_out[1]
+output_vector[2] <= shifter_6_7:add_instance.data_out[2]
+output_vector[3] <= shifter_6_7:add_instance.data_out[3]
+output_vector[4] <= shifter_6_7:add_instance.data_out[4]
+output_vector[5] <= shifter_6_7:add_instance.data_out[5]
+output_vector[6] <= shifter_6_7:add_instance.data_out[6]
+
+
+|DUT|shifter_6_7:add_instance
+data_in[0] => data_out[1].DATAIN
+data_in[1] => data_out[2].DATAIN
+data_in[2] => data_out[3].DATAIN
+data_in[3] => data_out[4].DATAIN
+data_in[4] => data_out[5].DATAIN
+data_in[5] => data_out[6].DATAIN
+data_out[0] <= <GND>
+data_out[1] <= data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_in[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_in[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

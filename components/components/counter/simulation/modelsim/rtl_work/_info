@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/soumy/OneDrive/Desktop/counter/simulation/modelsim
+Ecounter
+Z1 w1683028031
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/Users/soumy/OneDrive/Desktop/counter/Counter.vhd
+Z5 FC:/Users/soumy/OneDrive/Desktop/counter/Counter.vhd
+l0
+L4 1
+V@0EQBh`;JJXe^=>`fEQlC0
+!s100 IOWJ:`cC_;1n8T=XhG4EM1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1683029267
+!i10b 1
+Z8 !s108 1683029266.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/soumy/OneDrive/Desktop/counter/Counter.vhd|
+!s107 C:/Users/soumy/OneDrive/Desktop/counter/Counter.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Acount_inst
+R2
+R3
+DEx4 work 7 counter 0 22 @0EQBh`;JJXe^=>`fEQlC0
+!i122 1
+l17
+L15 13
+V9>A_Cm6>@ocCo4iCA7D352
+!s100 2;HL7TX63e`aQB>^F;^jO2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 C:/Users/soumy/OneDrive/Desktop/counter/Counter.vhd|
+!i113 1
+R10
+R11
+Edut
+Z13 w1683029231
+R2
+R3
+!i122 0
+R0
+Z14 8C:/Users/soumy/OneDrive/Desktop/counter/DUT.vhdl
+Z15 FC:/Users/soumy/OneDrive/Desktop/counter/DUT.vhdl
+l0
+L7 1
+Vob5aLN_P^:eH>3UhGU_5k1
+!s100 =1;@2k67:]PS;n4Kg^[Xl2
+R6
+31
+Z16 !s110 1683029266
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/soumy/OneDrive/Desktop/counter/DUT.vhdl|
+Z18 !s107 C:/Users/soumy/OneDrive/Desktop/counter/DUT.vhdl|
+!i113 1
+R10
+R11
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 ob5aLN_P^:eH>3UhGU_5k1
+!i122 0
+l23
+L12 28
+V8a5<RkWhdJKa5ESJ4o:3=0
+!s100 oN1Ac]8A?5OR[Mk<:[3Iz0
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R10
+R11

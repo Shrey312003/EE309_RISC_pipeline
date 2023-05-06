@@ -1,0 +1,44 @@
+|DUT
+input_vector[0] => mux_4to1_3:add_instance.x0[0]
+input_vector[1] => mux_4to1_3:add_instance.x0[1]
+input_vector[2] => mux_4to1_3:add_instance.x0[2]
+input_vector[3] => mux_4to1_3:add_instance.x1[0]
+input_vector[4] => mux_4to1_3:add_instance.x1[1]
+input_vector[5] => mux_4to1_3:add_instance.x1[2]
+input_vector[6] => mux_4to1_3:add_instance.x2[0]
+input_vector[7] => mux_4to1_3:add_instance.x2[1]
+input_vector[8] => mux_4to1_3:add_instance.x2[2]
+input_vector[9] => mux_4to1_3:add_instance.x3[0]
+input_vector[10] => mux_4to1_3:add_instance.x3[1]
+input_vector[11] => mux_4to1_3:add_instance.x3[2]
+input_vector[12] => mux_4to1_3:add_instance.sel[0]
+input_vector[13] => mux_4to1_3:add_instance.sel[1]
+output_vector[0] <= mux_4to1_3:add_instance.y[0]
+output_vector[1] <= mux_4to1_3:add_instance.y[1]
+output_vector[2] <= mux_4to1_3:add_instance.y[2]
+
+
+|DUT|mux_4to1_3:add_instance
+x0[0] => Mux2.IN0
+x0[1] => Mux1.IN0
+x0[2] => Mux0.IN0
+x1[0] => Mux2.IN1
+x1[1] => Mux1.IN1
+x1[2] => Mux0.IN1
+x2[0] => Mux2.IN2
+x2[1] => Mux1.IN2
+x2[2] => Mux0.IN2
+x3[0] => Mux2.IN3
+x3[1] => Mux1.IN3
+x3[2] => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+y[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

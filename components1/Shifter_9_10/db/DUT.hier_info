@@ -1,0 +1,44 @@
+|DUT
+input_vector[0] => shift_9_10:add_instance.data_in[0]
+input_vector[1] => shift_9_10:add_instance.data_in[1]
+input_vector[2] => shift_9_10:add_instance.data_in[2]
+input_vector[3] => shift_9_10:add_instance.data_in[3]
+input_vector[4] => shift_9_10:add_instance.data_in[4]
+input_vector[5] => shift_9_10:add_instance.data_in[5]
+input_vector[6] => shift_9_10:add_instance.data_in[6]
+input_vector[7] => shift_9_10:add_instance.data_in[7]
+input_vector[8] => shift_9_10:add_instance.data_in[8]
+output_vector[0] <= shift_9_10:add_instance.data_out[0]
+output_vector[1] <= shift_9_10:add_instance.data_out[1]
+output_vector[2] <= shift_9_10:add_instance.data_out[2]
+output_vector[3] <= shift_9_10:add_instance.data_out[3]
+output_vector[4] <= shift_9_10:add_instance.data_out[4]
+output_vector[5] <= shift_9_10:add_instance.data_out[5]
+output_vector[6] <= shift_9_10:add_instance.data_out[6]
+output_vector[7] <= shift_9_10:add_instance.data_out[7]
+output_vector[8] <= shift_9_10:add_instance.data_out[8]
+output_vector[9] <= shift_9_10:add_instance.data_out[9]
+
+
+|DUT|shift_9_10:add_instance
+data_in[0] => data_out[1].DATAIN
+data_in[1] => data_out[2].DATAIN
+data_in[2] => data_out[3].DATAIN
+data_in[3] => data_out[4].DATAIN
+data_in[4] => data_out[5].DATAIN
+data_in[5] => data_out[6].DATAIN
+data_in[6] => data_out[7].DATAIN
+data_in[7] => data_out[8].DATAIN
+data_in[8] => data_out[9].DATAIN
+data_out[0] <= <GND>
+data_out[1] <= data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_in[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_in[5].DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_in[6].DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_in[7].DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_in[8].DB_MAX_OUTPUT_PORT_TYPE
+
+

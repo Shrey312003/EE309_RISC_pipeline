@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ram is
+  generic (
+    depth : integer := 65,536;  -- number of words in the RAM
+    width : integer := 16    -- width of each word in bits
+  );
+  port (
+    clk : in std_logic;      -- clock input
+    addr : in std_logic_vector(log2(depth)-1 downto 0);  -- address input
+    
+    data_out : out std_logic_vector(width-1 downto 0)     -- data output
+  );
+end entity ram;
+
+architecture behavioral of ram is
+  type ram_type is array (0 to depth-1) of std_logic_vector(width-1 downto 0);
+  signal ram_data : ram_type;
+begin
+  -- read data from external file
+  file data_file : text open read_mode is "data_file.txt";
+  variable line : line;
+  variable word : string(1 to width);
+  variable word_index : integer;
+  variable addr_index : integer;
+begin
+  for addr_index in 0 to depth-1 loop
+    readline(data_file, line);
+    word_index := 1;
+    for i in 1 to width loop
+      read(word_index, line, word);
+      ram_data(addr_index)(i-1) <= word(1);
+      word_index := word_index + 1;
+    end loop;
+  end loop;
+  file_close(data_file);
+  
+  -- RAM behavior
+  process(clk)
+  begin
+    if rising_edge(clk) then
+      
+      data_out <= ram_data(to_integer(unsigned(addr)));
+    end if;
+  end process;
+end architecture behavioral;
