@@ -1,5 +1,5 @@
 Analysis & Elaboration report for DUT
-Sat May 06 20:35:08 2023
+Sat May 06 22:58:47 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "mux_4to1_1:M17"
+  6. Port Connectivity Checks: "mux_4to1_16:M4"
+  7. Port Connectivity Checks: "mux_4to1_16:M9"
+  8. Port Connectivity Checks: "reg_file_1:Register_file"
+  9. Port Connectivity Checks: "reg_z:Z"
+ 10. Port Connectivity Checks: "reg_carry:C"
+ 11. Port Connectivity Checks: "Adder:Adder1"
+ 12. Port Connectivity Checks: "Decoder:decoder1"
+ 13. Port Connectivity Checks: "reg_e:P5"
+ 14. Port Connectivity Checks: "reg_d:P4"
+ 15. Port Connectivity Checks: "reg_c1:P3"
+ 16. Port Connectivity Checks: "reg_b:P2"
+ 17. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Sat May 06 20:35:08 2023           ;
+; Analysis & Elaboration Status      ; Successful - Sat May 06 22:58:47 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; DUT                                         ;
 ; Top-level Entity Name              ; main                                        ;
@@ -158,165 +170,424 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_4to1_1:M17"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "mux_4to1_16:M4"  ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; x3[15..1] ; Input ; Info     ; Stuck at GND ;
+; x3[0]     ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "mux_4to1_16:M9"  ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; x2[15..2] ; Input ; Info     ; Stuck at GND ;
+; x2[1]     ; Input ; Info     ; Stuck at VCC ;
+; x2[0]     ; Input ; Info     ; Stuck at GND ;
+; x3[15..3] ; Input ; Info     ; Stuck at GND ;
+; x3[1..0]  ; Input ; Info     ; Stuck at GND ;
+; x3[2]     ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file_1:Register_file"                                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; r1    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset ; Input  ; Info     ; Stuck at GND                                                                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "reg_z:Z"    ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; writ ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "reg_carry:C" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; writ ; Input ; Info     ; Stuck at VCC  ;
++------+-------+----------+---------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "Adder:Adder1" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; wrt  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder:decoder1"                                                                     ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cb[31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_e:P5"                                                                                          ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rega_output[57..42] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_d:P4"                                                                                      ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rega_output[59] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_c1:P3"                                                                                     ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rega_output[46] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "reg_b:P2"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; writ ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 06 20:35:00 2023
+    Info: Processing started: Sat May 06 22:58:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c DUT --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file all_components/clock.vhd
-    Info (12022): Found design unit 1: clock-bhv File: D:/SEM_4/ee309/project/all_components/clock.vhd Line: 9
-    Info (12023): Found entity 1: clock File: D:/SEM_4/ee309/project/all_components/clock.vhd Line: 5
+    Info (12022): Found design unit 1: clock-bhv File: D:/SEM_4/ee309/final/all_components/clock.vhd Line: 9
+    Info (12023): Found entity 1: clock File: D:/SEM_4/ee309/final/all_components/clock.vhd Line: 5
 Info (12021): Found 90 design units, including 44 entities, in source file all_components.vhd
-    Info (12022): Found design unit 1: all_components File: D:/SEM_4/ee309/project/all_components.vhd Line: 9
-    Info (12022): Found design unit 2: L_shift-Shift1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 390
-    Info (12022): Found design unit 3: SE7-SE7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 417
-    Info (12022): Found design unit 4: mux_3to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 445
-    Info (12022): Found design unit 5: Decoder-behave File: D:/SEM_4/ee309/project/all_components.vhd Line: 473
-    Info (12022): Found design unit 6: instr_memory-memory_comp File: D:/SEM_4/ee309/project/all_components.vhd Line: 661
-    Info (12022): Found design unit 7: mux_2to1_3-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 697
-    Info (12022): Found design unit 8: mux_2to1_8-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 724
-    Info (12022): Found design unit 9: mux_4to1_1-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 750
-    Info (12022): Found design unit 10: mux_2to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 810
-    Info (12022): Found design unit 11: mux_5to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 838
-    Info (12022): Found design unit 12: mux_6to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 863
-    Info (12022): Found design unit 13: Adder-add File: D:/SEM_4/ee309/project/all_components.vhd Line: 897
-    Info (12022): Found design unit 14: ALU-alu File: D:/SEM_4/ee309/project/all_components.vhd Line: 935
-    Info (12022): Found design unit 15: reg_carry-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1162
-    Info (12022): Found design unit 16: complementor-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1217
-    Info (12022): Found design unit 17: counter1-count_inst File: D:/SEM_4/ee309/project/all_components.vhd Line: 1245
-    Info (12022): Found design unit 18: data_memory-memory_comp File: D:/SEM_4/ee309/project/all_components.vhd Line: 1286
-    Info (12022): Found design unit 19: Decrement-struct File: D:/SEM_4/ee309/project/all_components.vhd Line: 1329
-    Info (12022): Found design unit 20: Gates File: D:/SEM_4/ee309/project/all_components.vhd Line: 1345
-    Info (12022): Found design unit 21: INVERTER-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1387
-    Info (12022): Found design unit 22: AND_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1399
-    Info (12022): Found design unit 23: NAND_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1410
-    Info (12022): Found design unit 24: OR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1421
-    Info (12022): Found design unit 25: NOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1432
-    Info (12022): Found design unit 26: XOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1444
-    Info (12022): Found design unit 27: XNOR_2-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1455
-    Info (12022): Found design unit 28: HALF_ADDER-Equations File: D:/SEM_4/ee309/project/all_components.vhd Line: 1466
-    Info (12022): Found design unit 29: increment-struct File: D:/SEM_4/ee309/project/all_components.vhd Line: 1488
-    Info (12022): Found design unit 30: LLI-LLI File: D:/SEM_4/ee309/project/all_components.vhd Line: 1516
-    Info (12022): Found design unit 31: mux_2x1_16-viru_god File: D:/SEM_4/ee309/project/all_components.vhd Line: 1535
-    Info (12022): Found design unit 32: mux_4to1_3-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1563
-    Info (12022): Found design unit 33: mux_4to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1589
-    Info (12022): Found design unit 34: mux_8to1_16-Behavioral File: D:/SEM_4/ee309/project/all_components.vhd Line: 1613
-    Info (12022): Found design unit 35: reg_a-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1647
-    Info (12022): Found design unit 36: reg_b-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1690
-    Info (12022): Found design unit 37: reg_c1-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1726
-    Info (12022): Found design unit 38: reg_d-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1762
-    Info (12022): Found design unit 39: reg_e-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 1799
-    Info (12022): Found design unit 40: reg_file_1-behave File: D:/SEM_4/ee309/project/all_components.vhd Line: 1835
-    Info (12022): Found design unit 41: SE6-SE6 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1904
-    Info (12022): Found design unit 42: SE9-SE9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1934
-    Info (12022): Found design unit 43: SE10-Sign File: D:/SEM_4/ee309/project/all_components.vhd Line: 1961
-    Info (12022): Found design unit 44: shifter_6_7-Shift1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1993
-    Info (12022): Found design unit 45: shift_9_10-Shift9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 2018
-    Info (12022): Found design unit 46: reg_z-sim File: D:/SEM_4/ee309/project/all_components.vhd Line: 2044
-    Info (12023): Found entity 1: L_shift File: D:/SEM_4/ee309/project/all_components.vhd Line: 381
-    Info (12023): Found entity 2: SE7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 408
-    Info (12023): Found entity 3: mux_3to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 438
-    Info (12023): Found entity 4: Decoder File: D:/SEM_4/ee309/project/all_components.vhd Line: 463
-    Info (12023): Found entity 5: instr_memory File: D:/SEM_4/ee309/project/all_components.vhd Line: 647
-    Info (12023): Found entity 6: mux_2to1_3 File: D:/SEM_4/ee309/project/all_components.vhd Line: 688
-    Info (12023): Found entity 7: mux_2to1_8 File: D:/SEM_4/ee309/project/all_components.vhd Line: 717
-    Info (12023): Found entity 8: mux_4to1_1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 740
-    Info (12023): Found entity 9: mux_2to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 801
-    Info (12023): Found entity 10: mux_5to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 831
-    Info (12023): Found entity 11: mux_6to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 856
-    Info (12023): Found entity 12: Adder File: D:/SEM_4/ee309/project/all_components.vhd Line: 886
-    Info (12023): Found entity 13: ALU File: D:/SEM_4/ee309/project/all_components.vhd Line: 919
-    Info (12023): Found entity 14: reg_carry File: D:/SEM_4/ee309/project/all_components.vhd Line: 1152
-    Info (12023): Found entity 15: complementor File: D:/SEM_4/ee309/project/all_components.vhd Line: 1210
-    Info (12023): Found entity 16: Counter1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1234
-    Info (12023): Found entity 17: data_memory File: D:/SEM_4/ee309/project/all_components.vhd Line: 1263
-    Info (12023): Found entity 18: Decrement File: D:/SEM_4/ee309/project/all_components.vhd Line: 1320
-    Info (12023): Found entity 19: INVERTER File: D:/SEM_4/ee309/project/all_components.vhd Line: 1383
-    Info (12023): Found entity 20: AND_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1395
-    Info (12023): Found entity 21: NAND_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1406
-    Info (12023): Found entity 22: OR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1417
-    Info (12023): Found entity 23: NOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1428
-    Info (12023): Found entity 24: XOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1440
-    Info (12023): Found entity 25: XNOR_2 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1451
-    Info (12023): Found entity 26: HALF_ADDER File: D:/SEM_4/ee309/project/all_components.vhd Line: 1462
-    Info (12023): Found entity 27: increment File: D:/SEM_4/ee309/project/all_components.vhd Line: 1478
-    Info (12023): Found entity 28: LLI File: D:/SEM_4/ee309/project/all_components.vhd Line: 1507
-    Info (12023): Found entity 29: mux_2x1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1526
-    Info (12023): Found entity 30: mux_4to1_3 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1554
-    Info (12023): Found entity 31: mux_4to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1580
-    Info (12023): Found entity 32: mux_8to1_16 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1606
-    Info (12023): Found entity 33: reg_a File: D:/SEM_4/ee309/project/all_components.vhd Line: 1638
-    Info (12023): Found entity 34: reg_b File: D:/SEM_4/ee309/project/all_components.vhd Line: 1681
-    Info (12023): Found entity 35: reg_c1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1717
-    Info (12023): Found entity 36: reg_d File: D:/SEM_4/ee309/project/all_components.vhd Line: 1753
-    Info (12023): Found entity 37: reg_e File: D:/SEM_4/ee309/project/all_components.vhd Line: 1790
-    Info (12023): Found entity 38: reg_file_1 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1824
-    Info (12023): Found entity 39: SE6 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1895
-    Info (12023): Found entity 40: SE9 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1925
-    Info (12023): Found entity 41: SE10 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1953
-    Info (12023): Found entity 42: shifter_6_7 File: D:/SEM_4/ee309/project/all_components.vhd Line: 1984
-    Info (12023): Found entity 43: shift_9_10 File: D:/SEM_4/ee309/project/all_components.vhd Line: 2009
-    Info (12023): Found entity 44: reg_z File: D:/SEM_4/ee309/project/all_components.vhd Line: 2034
+    Info (12022): Found design unit 1: all_components File: D:/SEM_4/ee309/final/all_components.vhd Line: 9
+    Info (12022): Found design unit 2: L_shift-Shift1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 390
+    Info (12022): Found design unit 3: SE7-SE7 File: D:/SEM_4/ee309/final/all_components.vhd Line: 417
+    Info (12022): Found design unit 4: mux_3to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 445
+    Info (12022): Found design unit 5: Decoder-behave File: D:/SEM_4/ee309/final/all_components.vhd Line: 473
+    Info (12022): Found design unit 6: instr_memory-memory_comp File: D:/SEM_4/ee309/final/all_components.vhd Line: 661
+    Info (12022): Found design unit 7: mux_2to1_3-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 697
+    Info (12022): Found design unit 8: mux_2to1_8-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 724
+    Info (12022): Found design unit 9: mux_4to1_1-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 750
+    Info (12022): Found design unit 10: mux_2to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 810
+    Info (12022): Found design unit 11: mux_5to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 838
+    Info (12022): Found design unit 12: mux_6to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 863
+    Info (12022): Found design unit 13: Adder-add File: D:/SEM_4/ee309/final/all_components.vhd Line: 897
+    Info (12022): Found design unit 14: ALU-alu File: D:/SEM_4/ee309/final/all_components.vhd Line: 935
+    Info (12022): Found design unit 15: reg_carry-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1162
+    Info (12022): Found design unit 16: complementor-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 1217
+    Info (12022): Found design unit 17: counter1-count_inst File: D:/SEM_4/ee309/final/all_components.vhd Line: 1245
+    Info (12022): Found design unit 18: data_memory-memory_comp File: D:/SEM_4/ee309/final/all_components.vhd Line: 1286
+    Info (12022): Found design unit 19: Decrement-struct File: D:/SEM_4/ee309/final/all_components.vhd Line: 1329
+    Info (12022): Found design unit 20: Gates File: D:/SEM_4/ee309/final/all_components.vhd Line: 1345
+    Info (12022): Found design unit 21: INVERTER-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1387
+    Info (12022): Found design unit 22: AND_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1399
+    Info (12022): Found design unit 23: NAND_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1410
+    Info (12022): Found design unit 24: OR_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1421
+    Info (12022): Found design unit 25: NOR_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1432
+    Info (12022): Found design unit 26: XOR_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1444
+    Info (12022): Found design unit 27: XNOR_2-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1455
+    Info (12022): Found design unit 28: HALF_ADDER-Equations File: D:/SEM_4/ee309/final/all_components.vhd Line: 1466
+    Info (12022): Found design unit 29: increment-struct File: D:/SEM_4/ee309/final/all_components.vhd Line: 1488
+    Info (12022): Found design unit 30: LLI-LLI File: D:/SEM_4/ee309/final/all_components.vhd Line: 1516
+    Info (12022): Found design unit 31: mux_2x1_16-viru_god File: D:/SEM_4/ee309/final/all_components.vhd Line: 1535
+    Info (12022): Found design unit 32: mux_4to1_3-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 1563
+    Info (12022): Found design unit 33: mux_4to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 1589
+    Info (12022): Found design unit 34: mux_8to1_16-Behavioral File: D:/SEM_4/ee309/final/all_components.vhd Line: 1613
+    Info (12022): Found design unit 35: reg_a-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1647
+    Info (12022): Found design unit 36: reg_b-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1691
+    Info (12022): Found design unit 37: reg_c1-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1728
+    Info (12022): Found design unit 38: reg_d-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1765
+    Info (12022): Found design unit 39: reg_e-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 1803
+    Info (12022): Found design unit 40: reg_file_1-behave File: D:/SEM_4/ee309/final/all_components.vhd Line: 1840
+    Info (12022): Found design unit 41: SE6-SE6 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1909
+    Info (12022): Found design unit 42: SE9-SE9 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1939
+    Info (12022): Found design unit 43: SE10-Sign File: D:/SEM_4/ee309/final/all_components.vhd Line: 1966
+    Info (12022): Found design unit 44: shifter_6_7-Shift1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1998
+    Info (12022): Found design unit 45: shift_9_10-Shift9 File: D:/SEM_4/ee309/final/all_components.vhd Line: 2023
+    Info (12022): Found design unit 46: reg_z-sim File: D:/SEM_4/ee309/final/all_components.vhd Line: 2049
+    Info (12023): Found entity 1: L_shift File: D:/SEM_4/ee309/final/all_components.vhd Line: 381
+    Info (12023): Found entity 2: SE7 File: D:/SEM_4/ee309/final/all_components.vhd Line: 408
+    Info (12023): Found entity 3: mux_3to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 438
+    Info (12023): Found entity 4: Decoder File: D:/SEM_4/ee309/final/all_components.vhd Line: 463
+    Info (12023): Found entity 5: instr_memory File: D:/SEM_4/ee309/final/all_components.vhd Line: 647
+    Info (12023): Found entity 6: mux_2to1_3 File: D:/SEM_4/ee309/final/all_components.vhd Line: 688
+    Info (12023): Found entity 7: mux_2to1_8 File: D:/SEM_4/ee309/final/all_components.vhd Line: 717
+    Info (12023): Found entity 8: mux_4to1_1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 740
+    Info (12023): Found entity 9: mux_2to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 801
+    Info (12023): Found entity 10: mux_5to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 831
+    Info (12023): Found entity 11: mux_6to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 856
+    Info (12023): Found entity 12: Adder File: D:/SEM_4/ee309/final/all_components.vhd Line: 886
+    Info (12023): Found entity 13: ALU File: D:/SEM_4/ee309/final/all_components.vhd Line: 919
+    Info (12023): Found entity 14: reg_carry File: D:/SEM_4/ee309/final/all_components.vhd Line: 1152
+    Info (12023): Found entity 15: complementor File: D:/SEM_4/ee309/final/all_components.vhd Line: 1210
+    Info (12023): Found entity 16: Counter1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1234
+    Info (12023): Found entity 17: data_memory File: D:/SEM_4/ee309/final/all_components.vhd Line: 1263
+    Info (12023): Found entity 18: Decrement File: D:/SEM_4/ee309/final/all_components.vhd Line: 1320
+    Info (12023): Found entity 19: INVERTER File: D:/SEM_4/ee309/final/all_components.vhd Line: 1383
+    Info (12023): Found entity 20: AND_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1395
+    Info (12023): Found entity 21: NAND_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1406
+    Info (12023): Found entity 22: OR_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1417
+    Info (12023): Found entity 23: NOR_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1428
+    Info (12023): Found entity 24: XOR_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1440
+    Info (12023): Found entity 25: XNOR_2 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1451
+    Info (12023): Found entity 26: HALF_ADDER File: D:/SEM_4/ee309/final/all_components.vhd Line: 1462
+    Info (12023): Found entity 27: increment File: D:/SEM_4/ee309/final/all_components.vhd Line: 1478
+    Info (12023): Found entity 28: LLI File: D:/SEM_4/ee309/final/all_components.vhd Line: 1507
+    Info (12023): Found entity 29: mux_2x1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1526
+    Info (12023): Found entity 30: mux_4to1_3 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1554
+    Info (12023): Found entity 31: mux_4to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1580
+    Info (12023): Found entity 32: mux_8to1_16 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1606
+    Info (12023): Found entity 33: reg_a File: D:/SEM_4/ee309/final/all_components.vhd Line: 1638
+    Info (12023): Found entity 34: reg_b File: D:/SEM_4/ee309/final/all_components.vhd Line: 1682
+    Info (12023): Found entity 35: reg_c1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1719
+    Info (12023): Found entity 36: reg_d File: D:/SEM_4/ee309/final/all_components.vhd Line: 1756
+    Info (12023): Found entity 37: reg_e File: D:/SEM_4/ee309/final/all_components.vhd Line: 1794
+    Info (12023): Found entity 38: reg_file_1 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1829
+    Info (12023): Found entity 39: SE6 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1900
+    Info (12023): Found entity 40: SE9 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1930
+    Info (12023): Found entity 41: SE10 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1958
+    Info (12023): Found entity 42: shifter_6_7 File: D:/SEM_4/ee309/final/all_components.vhd Line: 1989
+    Info (12023): Found entity 43: shift_9_10 File: D:/SEM_4/ee309/final/all_components.vhd Line: 2014
+    Info (12023): Found entity 44: reg_z File: D:/SEM_4/ee309/final/all_components.vhd Line: 2039
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
-    Info (12022): Found design unit 1: main-behave File: D:/SEM_4/ee309/project/main.vhd Line: 19
-    Info (12023): Found entity 1: main File: D:/SEM_4/ee309/project/main.vhd Line: 8
+    Info (12022): Found design unit 1: main-behave File: D:/SEM_4/ee309/final/main.vhd Line: 19
+    Info (12023): Found entity 1: main File: D:/SEM_4/ee309/final/main.vhd Line: 8
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at main.vhd(27): used implicit default value for signal "SE_in4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 27
-Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "C_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 31
-Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "Z_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 31
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(31): object "M17_out" assigned a value but never read File: D:/SEM_4/ee309/project/main.vhd Line: 31
-Warning (10541): VHDL Signal Declaration warning at main.vhd(39): used implicit default value for signal "SE_in5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/project/main.vhd Line: 39
-Info (12128): Elaborating entity "reg_a" for hierarchy "reg_a:P1" File: D:/SEM_4/ee309/project/main.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at all_components.vhd(1657): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/project/all_components.vhd Line: 1657
-Info (10635): VHDL Report Statement at all_components.vhd(1657): "pipeline1 = 0" (NOTE) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1657
-Error (10818): Can't infer register for "rega_output[0]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[0]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[1]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[1]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[2]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[2]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[3]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[3]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[4]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[4]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[5]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[5]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[6]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[6]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[7]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[7]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[8]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[8]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[9]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[9]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[10]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[10]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[11]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[11]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[12]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[12]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[13]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[13]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[14]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[14]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[15]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[15]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[16]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[16]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[17]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[17]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (10818): Can't infer register for "rega_output[18]" at all_components.vhd(1658) because it does not hold its value outside the clock edge File: D:/SEM_4/ee309/project/all_components.vhd Line: 1658
-Info (10041): Inferred latch for "rega_output[18]" at all_components.vhd(1655) File: D:/SEM_4/ee309/project/all_components.vhd Line: 1655
-Error (12152): Can't elaborate user hierarchy "reg_a:P1" File: D:/SEM_4/ee309/project/main.vhd Line: 119
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 20 errors, 7 warnings
-    Error: Peak virtual memory: 4780 megabytes
-    Error: Processing ended: Sat May 06 20:35:08 2023
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:12
+Warning (10541): VHDL Signal Declaration warning at main.vhd(27): used implicit default value for signal "SE_in4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/final/main.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "C_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/final/main.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at main.vhd(31): used implicit default value for signal "Z_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/final/main.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(31): object "M17_out" assigned a value but never read File: D:/SEM_4/ee309/final/main.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at main.vhd(39): used implicit default value for signal "SE_in5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/SEM_4/ee309/final/main.vhd Line: 39
+Info (12128): Elaborating entity "reg_a" for hierarchy "reg_a:P1" File: D:/SEM_4/ee309/final/main.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1657): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1657
+Info (10635): VHDL Report Statement at all_components.vhd(1657): "pipeline1 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1657
+Info (12128): Elaborating entity "reg_b" for hierarchy "reg_b:P2" File: D:/SEM_4/ee309/final/main.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1697): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1697
+Info (10635): VHDL Report Statement at all_components.vhd(1697): "pipeline2 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1697
+Info (12128): Elaborating entity "reg_c1" for hierarchy "reg_c1:P3" File: D:/SEM_4/ee309/final/main.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1734): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1734
+Info (10635): VHDL Report Statement at all_components.vhd(1734): "pipeline3 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1734
+Info (12128): Elaborating entity "reg_d" for hierarchy "reg_d:P4" File: D:/SEM_4/ee309/final/main.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1771): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1771
+Info (10635): VHDL Report Statement at all_components.vhd(1771): "pipeline4 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1771
+Info (12128): Elaborating entity "reg_e" for hierarchy "reg_e:P5" File: D:/SEM_4/ee309/final/main.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1809): signal "rega_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1809
+Info (10635): VHDL Report Statement at all_components.vhd(1809): "pipeline5 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1809
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:Data_Memory1" File: D:/SEM_4/ee309/final/main.vhd Line: 142
+Info (12128): Elaborating entity "complementor" for hierarchy "complementor:C1" File: D:/SEM_4/ee309/final/main.vhd Line: 145
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1221): signal "check" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1221
+Info (12128): Elaborating entity "instr_memory" for hierarchy "instr_memory:Instruction_memory" File: D:/SEM_4/ee309/final/main.vhd Line: 149
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder1" File: D:/SEM_4/ee309/final/main.vhd Line: 152
+Info (10635): VHDL Report Statement at all_components.vhd(481): "Instruction = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 481
+Info (12128): Elaborating entity "increment" for hierarchy "increment:Incrementer1" File: D:/SEM_4/ee309/final/main.vhd Line: 156
+Warning (10540): VHDL Signal Declaration warning at all_components.vhd(1489): used explicit default value for signal "a" because signal was never assigned a value File: D:/SEM_4/ee309/final/all_components.vhd Line: 1489
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1494): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1494
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1494): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1494
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1496): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1496
+Info (12128): Elaborating entity "Counter1" for hierarchy "Counter1:Counter2" File: D:/SEM_4/ee309/final/main.vhd Line: 159
+Info (12128): Elaborating entity "Decrement" for hierarchy "Decrement:Decrementer" File: D:/SEM_4/ee309/final/main.vhd Line: 162
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:Adder1" File: D:/SEM_4/ee309/final/main.vhd Line: 165
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: D:/SEM_4/ee309/final/main.vhd Line: 168
+Warning (10492): VHDL Process Statement warning at all_components.vhd(956): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 956
+Warning (10492): VHDL Process Statement warning at all_components.vhd(957): signal "carry_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 957
+Warning (10492): VHDL Process Statement warning at all_components.vhd(962): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 962
+Warning (10492): VHDL Process Statement warning at all_components.vhd(963): signal "zero_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 963
+Warning (10492): VHDL Process Statement warning at all_components.vhd(972): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 972
+Warning (10492): VHDL Process Statement warning at all_components.vhd(980): signal "negative_b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 980
+Warning (10492): VHDL Process Statement warning at all_components.vhd(982): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 982
+Warning (10492): VHDL Process Statement warning at all_components.vhd(991): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 991
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1000): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1000
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1001): signal "carry_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1001
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1004): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1004
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1011): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1011
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1016): signal "carry_when_neg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1016
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1016): signal "carry_when_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1016
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1018): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1018
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1025): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1025
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1026): signal "zero_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1026
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1029): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1029
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1036): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1036
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1041): signal "carry_when_neg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1041
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1041): signal "carry_when_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1041
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1044): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1044
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1051): signal "cz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1051
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1052): signal "carry_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1052
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1054): signal "carry_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1054
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1054): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1054
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1061): signal "carry_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1061
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1061): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1061
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1066): signal "carry_when_neg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1066
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1066): signal "carry_when_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1066
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1069): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1069
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1077): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1077
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1084): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1084
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1089): signal "carry_when_neg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1089
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1089): signal "carry_when_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1089
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1092): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1092
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1108): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1108
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1118): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1118
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1125): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1125
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1130): signal "carry_when_neg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1130
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1130): signal "carry_when_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1130
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1132): signal "alu_out_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1132
+Warning (10631): VHDL Process Statement warning at all_components.vhd(951): inferring latch(es) for signal or variable "alu_out_sig", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Warning (10631): VHDL Process Statement warning at all_components.vhd(951): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Warning (10631): VHDL Process Statement warning at all_components.vhd(951): inferring latch(es) for signal or variable "carry", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Warning (10631): VHDL Process Statement warning at all_components.vhd(951): inferring latch(es) for signal or variable "carry_when_pos", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Warning (10631): VHDL Process Statement warning at all_components.vhd(951): inferring latch(es) for signal or variable "carry_when_neg", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "carry_when_neg" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "carry_when_pos" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "carry" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "zero" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[0]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[1]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[2]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[3]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[4]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[5]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[6]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[7]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[8]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[9]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[10]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[11]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[12]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[13]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[14]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (10041): Inferred latch for "alu_out_sig[15]" at all_components.vhd(951) File: D:/SEM_4/ee309/final/all_components.vhd Line: 951
+Info (12128): Elaborating entity "reg_carry" for hierarchy "reg_carry:C" File: D:/SEM_4/ee309/final/main.vhd Line: 171
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1168): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1168
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1170): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1170
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1173): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1173
+Info (12128): Elaborating entity "reg_z" for hierarchy "reg_z:Z" File: D:/SEM_4/ee309/final/main.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at all_components.vhd(2055): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 2055
+Warning (10492): VHDL Process Statement warning at all_components.vhd(2057): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 2057
+Warning (10492): VHDL Process Statement warning at all_components.vhd(2060): signal "output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 2060
+Info (12128): Elaborating entity "L_shift" for hierarchy "L_shift:Shifter" File: D:/SEM_4/ee309/final/main.vhd Line: 177
+Info (12128): Elaborating entity "reg_file_1" for hierarchy "reg_file_1:Register_file" File: D:/SEM_4/ee309/final/main.vhd Line: 180
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1850): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1850
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1877): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1877
+Info (10635): VHDL Report Statement at all_components.vhd(1877): "PC = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1877
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1878): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1878
+Info (10635): VHDL Report Statement at all_components.vhd(1878): "R1 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1878
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1879): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1879
+Info (10635): VHDL Report Statement at all_components.vhd(1879): "R2 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1879
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1880): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1880
+Info (10635): VHDL Report Statement at all_components.vhd(1880): "R3 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1880
+Warning (10492): VHDL Process Statement warning at all_components.vhd(1883): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/SEM_4/ee309/final/all_components.vhd Line: 1883
+Info (10635): VHDL Report Statement at all_components.vhd(1883): "R5 = 0" (NOTE) File: D:/SEM_4/ee309/final/all_components.vhd Line: 1883
+Info (12128): Elaborating entity "SE6" for hierarchy "SE6:SE1_6bit" File: D:/SEM_4/ee309/final/main.vhd Line: 190
+Info (12128): Elaborating entity "SE7" for hierarchy "SE7:SE2_9bit" File: D:/SEM_4/ee309/final/main.vhd Line: 193
+Info (12128): Elaborating entity "SE9" for hierarchy "SE9:SE3_7bit" File: D:/SEM_4/ee309/final/main.vhd Line: 196
+Info (12128): Elaborating entity "SE10" for hierarchy "SE10:SE6_10bit" File: D:/SEM_4/ee309/final/main.vhd Line: 205
+Info (12128): Elaborating entity "shift_9_10" for hierarchy "shift_9_10:S1" File: D:/SEM_4/ee309/final/main.vhd Line: 220
+Info (12128): Elaborating entity "shifter_6_7" for hierarchy "shifter_6_7:S2" File: D:/SEM_4/ee309/final/main.vhd Line: 223
+Info (12128): Elaborating entity "mux_4to1_16" for hierarchy "mux_4to1_16:M9" File: D:/SEM_4/ee309/final/main.vhd Line: 230
+Info (12128): Elaborating entity "mux_5to1_16" for hierarchy "mux_5to1_16:M12" File: D:/SEM_4/ee309/final/main.vhd Line: 233
+Warning (10631): VHDL Process Statement warning at all_components.vhd(840): inferring latch(es) for signal or variable "y", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[0]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[1]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[2]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[3]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[4]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[5]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[6]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[7]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[8]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[9]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[10]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[11]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[12]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[13]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[14]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (10041): Inferred latch for "y[15]" at all_components.vhd(840) File: D:/SEM_4/ee309/final/all_components.vhd Line: 840
+Info (12128): Elaborating entity "mux_2to1_3" for hierarchy "mux_2to1_3:M15" File: D:/SEM_4/ee309/final/main.vhd Line: 236
+Info (12128): Elaborating entity "mux_2to1_8" for hierarchy "mux_2to1_8:M1" File: D:/SEM_4/ee309/final/main.vhd Line: 239
+Info (12128): Elaborating entity "mux_2to1_16" for hierarchy "mux_2to1_16:M2" File: D:/SEM_4/ee309/final/main.vhd Line: 242
+Info (12128): Elaborating entity "mux_6to1_16" for hierarchy "mux_6to1_16:M13" File: D:/SEM_4/ee309/final/main.vhd Line: 245
+Warning (10631): VHDL Process Statement warning at all_components.vhd(865): inferring latch(es) for signal or variable "y", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[0]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[1]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[2]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[3]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[4]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[5]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[6]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[7]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[8]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[9]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[10]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[11]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[12]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[13]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[14]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (10041): Inferred latch for "y[15]" at all_components.vhd(865) File: D:/SEM_4/ee309/final/all_components.vhd Line: 865
+Info (12128): Elaborating entity "mux_3to1_16" for hierarchy "mux_3to1_16:M3" File: D:/SEM_4/ee309/final/main.vhd Line: 251
+Warning (10631): VHDL Process Statement warning at all_components.vhd(447): inferring latch(es) for signal or variable "y", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[0]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[1]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[2]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[3]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[4]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[5]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[6]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[7]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[8]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[9]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[10]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[11]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[12]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[13]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[14]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (10041): Inferred latch for "y[15]" at all_components.vhd(447) File: D:/SEM_4/ee309/final/all_components.vhd Line: 447
+Info (12128): Elaborating entity "mux_4to1_3" for hierarchy "mux_4to1_3:M10" File: D:/SEM_4/ee309/final/main.vhd Line: 273
+Info (12128): Elaborating entity "mux_4to1_1" for hierarchy "mux_4to1_1:M17" File: D:/SEM_4/ee309/final/main.vhd Line: 279
+Warning (10631): VHDL Process Statement warning at all_components.vhd(752): inferring latch(es) for signal or variable "y", which holds its previous value in one or more paths through the process File: D:/SEM_4/ee309/final/all_components.vhd Line: 752
+Info (10041): Inferred latch for "y[0]" at all_components.vhd(752) File: D:/SEM_4/ee309/final/all_components.vhd Line: 752
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Sat May 06 22:58:47 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
 
 

@@ -10,7 +10,7 @@ architecture bhv of clock is
 
 signal rst : std_logic := '0';
 --constant clk_frequency : integer := 2e4; --set time period to 5ns
-constant clk_period : time:= 40000 ps;
+constant clk_period : time:= 80000 ps;
 signal clk: std_logic := '1';
 signal R1: std_logic_vector(15 downto 0);
 

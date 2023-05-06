@@ -669,8 +669,8 @@ architecture memory_comp of instr_memory is
 		begin
 --
 --		
-                         --LLI and JAL
-				 memory_block<= ("00000010","10000010",others=>"00000000");
+                         --LLI and JAL"00000010","10000010"
+				 memory_block<= ("00110010","00000001",others=>"00000000");
 		
       
 		--	memory_block(to_integer(unsigned(address_in(3 downto 0)))) <= data_in;
@@ -1645,7 +1645,7 @@ signal rega_output: out std_logic_vector(31 downto 0)
 end reg_a;
 
 architecture sim of reg_a is
-   signal output: std_logic_vector(31 downto 0);
+   signal output: std_logic_vector(31 downto 0):= (others => '0');
 	signal count : integer:=0;
 
 --	 rega_output<="00000000000000000000000000000000";
@@ -1663,9 +1663,10 @@ process(clk,reset,writ) is
 		
 	     if(writ="1") then 
         output(31 downto 0)<=rega_input(31 downto 0);
-		  end if;
+		  
        elsif(reset='1') then
-        rega_output<="00000000000000000000000000000000";
+        output<="00000000000000000000000000000000";
+		  end if;
     end if;
 	      
  end process;
@@ -1688,7 +1689,7 @@ signal rega_output: out std_logic_vector(60 downto 0)
 end reg_b;
 
 architecture sim of reg_b is
-   signal output: std_logic_vector(60 downto 0);
+   signal output: std_logic_vector(60 downto 0):= (others => '0');
 begin
 
 process(clk) is
@@ -1698,9 +1699,10 @@ process(clk) is
     if rising_edge(clk) then
 	   if(writ="1")then
         output(60 downto 0)<=rega_input(60 downto 0);
-		  end if;
+		  
        elsif(reset='1') then
-        rega_output<="0000000000000000000000000000000000000000000000000000000000000";
+        output<="0000000000000000000000000000000000000000000000000000000000000";
+		  end if;
     end if;
 	    
  end process;
@@ -1724,7 +1726,7 @@ signal rega_output: out std_logic_vector(82 downto 0)
 end reg_c1;
 
 architecture sim of reg_c1 is
-   signal output: std_logic_vector(82 downto 0);
+   signal output: std_logic_vector(82 downto 0):= (others => '0');
 begin
 
 process(clk) is
@@ -1734,9 +1736,10 @@ process(clk) is
     if rising_edge(clk) then
 	     if(writ="1") then
         output(82 downto 0)<=rega_input(82 downto 0);
-		  end if;
+		  
        elsif(reset='1') then
-        rega_output<="00000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+        output<="00000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+		  end if;
     end if;
  end process;
  	     rega_output(82 downto 0) <= output(82 downto 0); 
@@ -1760,7 +1763,7 @@ signal rega_output: out std_logic_vector(94 downto 0)
 end reg_d;
 
 architecture sim of reg_d is
-   signal output: std_logic_vector(94 downto 0);
+   signal output: std_logic_vector(94 downto 0):= (others => '0');
 begin
 
 process(clk,writ,reset) is
@@ -1770,11 +1773,12 @@ process(clk,writ,reset) is
     if rising_edge(clk) then
 	     if(writ="1") then
         output(94 downto 0)<=rega_input(94 downto 0);
-		  end if;
+		  
 		  
        elsif(reset='1') then
-        rega_output<="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-    end if;
+        output<="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+			end if;
+	 end if;
  end process;
  	     rega_output(94 downto 0) <= output(94 downto 0); 
 
@@ -1797,7 +1801,7 @@ signal rega_output: out std_logic_vector(57 downto 0)
 end reg_e;
 
 architecture sim of reg_e is
-   signal output: std_logic_vector(57 downto 0);
+   signal output: std_logic_vector(57 downto 0):= (others => '0');
 begin
 
 process(clk,writ,reset) is
@@ -1807,10 +1811,11 @@ process(clk,writ,reset) is
     if rising_edge(clk) then
 	     if(writ="1") then
         output(57 downto 0)<=rega_input(57 downto 0);
-		  end if;
+		  
 		  
        elsif(reset='1') then
-        rega_output<="0000000000000000000000000000000000000000000000000000000000";
+        output<="0000000000000000000000000000000000000000000000000000000000";
+		  end if;
     end if;
  end process;
  	     rega_output(57 downto 0) <= output(57 downto 0); 

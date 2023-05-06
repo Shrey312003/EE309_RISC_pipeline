@@ -78,7 +78,7 @@ architecture behave of main is
 ----------------------------------------
         S1_in <= out_p1(8 downto 0);
         SE_in3 <= out_p1(8 downto 0);
-        PC_instr_P1 <= out_p1;
+        PC_Instr_P1 <= out_p1;
         P1_instr <= out_p1(15 downto 0);
 ------------------------------------------
         PC_15to8_CB_Counter_P2 <= out_p2(60 downto 45 ) & out_p2(44 downto 37) & out_p2(18 downto 0);
